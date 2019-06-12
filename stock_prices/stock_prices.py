@@ -5,10 +5,10 @@ import argparse
 
 def find_max_profit(prices):
     pass
+    max_profit = 0
+    curr_profit = 0
 
-
-current_min_price_so_far = 0
-max_profit_so_far = 0
+    return max_profit
 
 
 if __name__ == '__main__':
