@@ -5,8 +5,19 @@ import argparse
 
 def find_max_profit(prices):
     pass
-    max_profit = 0
-    curr_profit = 0
+    max_profit = None
+
+    for i in range(0, len(prices) - 1):
+        curr_profit = prices[i]
+        sell_price = i + 1
+        print(curr_profit)
+
+        for j in prices[sell_price:]:
+            profit = j - curr_profit
+            print([profit])
+
+            if max_profit == None or profit > max_profit:
+                max_profit = profit
 
     return max_profit
 
