@@ -18,7 +18,7 @@ def recipe_batches(recipe, ingredients):
             f'this is new value from deviding recipe value {ingredients[amount]}  = {value}')
         if value == 0:
             return 0
-        elif value < curr_val:
+        elif value <= curr_val:
             curr_val = value
 
     return curr_val
