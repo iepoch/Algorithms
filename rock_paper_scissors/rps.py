@@ -5,9 +5,11 @@ import sys
 
 def rock_paper_scissors(n):
     pass
+    # Set to empty list of list because you can start with nothing
     possible = [[]]
-    allPoss = []
-    cache = {0: 1}
+    allPoss = []  # All possibilities to be stored here
+    cache = {0: 1}  # Cache recursion to stop making so many calls
+    # Set the options to be stored for latter
     options = [['rock'], ['paper'], ['scissors']]
 
     if n == 0:
@@ -18,10 +20,13 @@ def rock_paper_scissors(n):
 
         before = rock_paper_scissors(n-1)
         cache[n] = before
+
+        # print(cache[n]) Checking to see if it's been cached
+
         for pos in before:
             for option in options:
                 allPoss.append(pos + option)
-    print(f'All possible ways: \n{allPoss}\n')
+    # print(f'All possible ways: \n{allPoss}\n')  Viewing what is getting printed
     return allPoss
 
 
