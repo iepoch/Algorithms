@@ -6,14 +6,16 @@ import math
 def recipe_batches(recipe, ingredients):
     pass
 
-    curr_val = math.inf
+    curr_val = math.inf  # inital value for optimization
 
     for amount, value in recipe.items():
-
+        # Checking for what is returned here print(amount, value)
         if amount not in ingredients:
             return 0
         value = ingredients[amount] // value
-        print(f'this is new value {amount} : {value}')
+       # Printing out what the amounts are deviding by
+        print(
+            f'this is new value from deviding recipe value {ingredients[amount]}  = {value}')
         if value == 0:
             return 0
         elif value < curr_val:
