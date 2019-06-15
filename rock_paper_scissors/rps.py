@@ -23,7 +23,7 @@ def rock_paper_scissors(n):
 
         # print(cache[n]) Checking to see if it's been cached
 
-        for pos in before:
+        for pos in cache[n]:
             for option in options:
                 allPoss.append(pos + option)
     # print(f'All possible ways: \n{allPoss}\n')  Viewing what is getting printed
